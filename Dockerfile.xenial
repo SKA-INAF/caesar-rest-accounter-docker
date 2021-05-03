@@ -17,6 +17,6 @@ COPY run_accounter.sh /opt/caesar-rest/bin/run_accounter.sh
 RUN chmod +x /opt/caesar-rest/bin/run_accounter.sh
 
 # - Run 
-CMD ["/opt/caesar-rest/bin/run_accounter.sh --runuser=$USER --datadir=$DATADIR --jobdir=$JOBDIR --job-monitoring-period=$JOB_MONITORING_PERIOD --dbhost=$DBHOST --dbport=$DBPORT --dbname=$DBNAME --mount-rclone-volume=$MOUNT_RCLONE_VOLUME --mount-volume-path=$MOUNT_VOLUME_PATH --rclone-remote-storage=$RCLONE_REMOTE_STORAGE --rclone-remote-storage-path=$RCLONE_REMOTE_STORAGE_PATH --rclone-mount-wait=$RCLONE_MOUNT_WAIT_TIME"]
+CMD ["sh", "-c", "/opt/caesar-rest/bin/run_accounter.sh --runuser=$USER --datadir=$DATADIR --jobdir=$JOBDIR --job-monitoring-period=$JOB_MONITORING_PERIOD --dbhost=$DBHOST --dbport=$DBPORT --dbname=$DBNAME --mount-rclone-volume=$MOUNT_RCLONE_VOLUME --mount-volume-path=$MOUNT_VOLUME_PATH --rclone-remote-storage=$RCLONE_REMOTE_STORAGE --rclone-remote-storage-path=$RCLONE_REMOTE_STORAGE_PATH --rclone-mount-wait=$RCLONE_MOUNT_WAIT_TIME"]
 
 
